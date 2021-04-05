@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Navbar ===== */
+
+:root {
+  --bg-color: rgb(10 27 74 / 94%);
+  --text-color: #818ea3;
+  --heading-color: rgb(71 71 226);
+}
+
+
+body {
+  background: var(--bg-color);
+  background: rgb(13 31 80);
+  max-width: 1200px;
+  margin: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 12vh;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 15px;
+}
+
+
+.logo {
+  font-size: 1.7rem;
+  color: #3e41cc;
+  font-family: Train One;
+  text-transform: uppercase;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  font-size: 1.2rem;
+}
+
+.links li {
+  margin: 0px 15px;
+}
+
+.search-container {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  width: 80%;
+}
+
+form {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.search-field {
+    width: 100%;
+    height: 7vh;
+    background: transparent;
+    border: none;
+    box-shadow: 0px 0px 10px -2px black;
+    padding-left: 10px;
+    color: #a3a3f0;
+    position: relative;
+}
+
+.button {
+  position: absolute;
+  margin-left: auto;
+  left: 0;
+  right: 0;
+  margin-right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #3e41cc;
+}
+
+
+.search-field:focus {
+  background: transparent;
+  border: 1px solid #a3a3f0;
+  outline: 1px solid #3e41cc;
+}
+
+::placeholder {
+  color: #a3a3f0;
+  font-family: Kiwi Maru;
+}
+
+.nav-info {
+  margin-right: 20px;
+}
+
+.nav-info,
+.notification {
+  width: 20%;
+  text-align: center;
+}
+
+.notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.notification .fa-bell {
+  display: block;
+  position: relative;
+  color:#3e41cc;
+  font-size: 2rem;
+  transition: ease 0.4s;
+}
+
+.notification .fa-bell:hover {
+  cursor: pointer;
+}
+
+.circle {
+  position: absolute;
+  top: -40%;
+  right: 32%;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0px 0px 22px rgb(0 0 0 / 87%);
+  color: #3e41cc;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notifications {
+  display: none;
+  color: #a3a3f0;
+  position: absolute;
+  text-align: center;
+  display: none;
+  bottom: -30px;
+  white-space: nowrap;
+}
+/* / ===== Navbar ===== */
+
+/*  ===== Side-Navbar ===== */
+
+.sidebar {
+  padding: 20px 0px;
+}
+
+.sidebar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sidebar li {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  opacity: 0.85;
+  flex: 1 1 150px;
+  text-align: center;
+}
+
+
+
+.sidebar a {
+  text-decoration: none;
+  color: var(--heading-color);
+  font-family: New Tegomin;
+  transition: ease-in-out 0.3s;
+}
+
+
+.sidebar a:hover {
+  transform: scale(1.1);
+}
+
+
+/* / ===== Side-Navbar ===== */
+
+
+
+/* ===== Components ===== */
+
+/* Grid-Container */
+.grid-container {
+  margin: 0 auto;
+  width: 85%;
+  padding-bottom: 50px;
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.welcome h2 {
+  font-family: Kiwi Maru;
+  color: var(--heading-color);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.welcome .name {
+  font-size: 3rem;
+  color: var(--heading-color);
+  text-transform: uppercase;
+  font-weight: 900;
+  opacity: 0.1;
+}
+
+.welcome span {
+  font-family: New Tegomin;
+  color: var(--text-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+
+h1 {
+  color: blue;
+  font-size: 1.8rem;
+  font-family: New Tegomin;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: var(--heading-color);
+  font-size: 1.5rem;
+  font-family: New Tegomin;
+  margin-bottom: 10px;
+  position: relative;
+  opacity: 0.85;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: -8px;
+  width: 50px;
+  background: rgba(0, 0, 117, 0.89);
+  height: 3px;
+}
+
+
+span {
+  display: inline-block;
+  color: var(--text-color);
+  opacity: 0.85;
+  font-size: 1rem;
+}
+
+li {
+  list-style: none;
+  color: #a3a3f0;
+  font-size: 0.95rem
+}
+
+.profile {
+  margin-top: 20px;
+  border-radius: 20px;
+  color: #a3a3f0;
+}
+
+.profile img {
+  border-radius: 20px;
+  position: absolute;
+  background-position: center;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  opacity: 0.05;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+
+
+.bg-light {
+ 
+  /* background: rgb(20, 24, 52); */
+  box-shadow: 0px 0px 22px -9px rgb(0 0 0 / 87%);
+  padding: 30px;
+}
+
+
+.data {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chart {
+  margin-top: 20px;
+  height: 300px;
+  flex: 1 1 450px;
+  width: 100%;
+  box-shadow: 0px 0px 22px -9px rgb(0 0 0 / 87%)
+}
+
+.peers {
+  margin-top: 20px;
+  margin-left: 20px;
+  flex: 1 1 300px;
+  box-shadow: 0px 0px 22px -9px rgb(0 0 0 / 87%)
+}
+
+canvas {
+  flex: 1 1 300px !important;
+}
+
+.peer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.peers li {
+  color: #a3a3f0;
+  margin: 10px 10px 10px 0px;
+  transition: ease-in-out 0.3s;
+  font-size: 1.15rem;
+  font-family: 'Kiwi Maru';
+}
+
+.peers li:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.company-news {
+  flex: 1 1 400px;
+  margin: 20px 15px 20px 0px;
+}
+
+.company-news img {
+  position: relative;
+  width: 100%;
+  object-fit: cover;
+}
+
+.company-news p {
+  color: #a3a3f0;
+  margin: 20px 0px;
+}
+
+.company-news h3 {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.company-tech {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.company-tech h3 {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 10px 0px;
+  flex: 1 1 175px;
+  font-size: 1.25rem;
+  font-family: Kiwi Maru;
+  border-radius: 10px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: var(--heading-color);
+}
+
+.company-tech span {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+  color: #a3a3f0;
+}
+
+.company-tech .change {
+  font-size: 0.9rem;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.company-tech h3:last-child {
+  margin-right: 0px;
+}
+
+.technicals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+
+select {
+  width: 100px;
+  margin: 8px;
+  padding: 5px;
+  background: transparent;
+  border: solid 1px #30389b;
+  box-shadow: 0px 5px 15px -5px rgb(0 0 0 / 87%);
+  color: #30389b;
+  font-weight: 800;
+}
+
+option {
+  font-family: Kiwi Maru;
+  background: var(--bg-color);
+  font-weight: 800;
+  padding: 2px 0px;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+}
+
+.financials {
+  margin-top: 20px;
+}
+
+.financial-data {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.finance {
+  flex: 1 1 450px;
+  margin: 0px 10px 10px 0px;
+}
+
+.finance h2 {
+  color: var(--text-color);
+}
+
+.finance h3 {
+  padding-top: 12px;
+}
+
+@media only screen and (max-width: 700px) {
+
+  .welcome {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+
+  .peers {
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+
+  .company-tech h2 {
+    font-size: 1.5rem;
+  }
+  
+  .company-tech h3 {
+    font-size: 0.75rem;
+  }
+
+  .company-tech p {
+    font-size: 0.9rem;
+  }
+
+  form {
+    width: 80%;
+  }
+
+  .notification {
+    padding-right: 25px;
+  }
+
+  .notifications {
+    font-size: 0.6rem;
+  }
+}
