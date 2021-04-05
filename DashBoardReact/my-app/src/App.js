@@ -27,12 +27,12 @@ function App() {
 
 
   let urls = [
-    `https://finnhub.io/api/v1/company-news?symbol=${symbol}&from=2021-03-01&to=${today}&token=budo2rv48v6spq9og4p0`,
-    `https://finnhub.io/api/v1/stock/peers?symbol=${symbol}&token=budo2rv48v6spq9og4p0`,
-    `https://finnhub.io/api/v1/stock/profile2?symbol=${symbol}&token=budo2rv48v6spq9og4p0`,
-    `https://finnhub.io/api/v1/stock/financials-reported?symbol=${symbol}&token=budo2rv48v6spq9og4p0`,
-    `http://api.marketstack.com/v1/eod?access_key=72d118ca9db1873033447561590e2794&symbols=${symbol}`,
-    `http://api.marketstack.com/v1/eod?access_key=72d118ca9db1873033447561590e2794&symbols=${symbol}&date_from=${weekAgo}&date_to=${today}`
+    `https://finnhub.io/api/v1/company-news?symbol=${symbol}&from=2021-03-01&to=${today}&token=${process.env.REACT_APP_API_FINN_KEY}`,
+    `https://finnhub.io/api/v1/stock/peers?symbol=${symbol}&token=${process.env.REACT_APP_API_FINN_KEY}`,
+    `https://finnhub.io/api/v1/stock/profile2?symbol=${symbol}&token=${process.env.REACT_APP_API_FINN_KEY}`,
+    `https://finnhub.io/api/v1/stock/financials-reported?symbol=${symbol}&token=${process.env.REACT_APP_API_FINN_KEY}`,
+    `http://api.marketstack.com/v1/eod?access_key=${process.env.REACT_APP_API_MARKET_KEY}&symbols=${symbol}`,
+    `http://api.marketstack.com/v1/eod?access_key=${process.env.REACT_APP_API_MARKET_KEY}&symbols=${symbol}&date_from=${weekAgo}&date_to=${today}`
   ]
 
   const handleChange = (e) => {
